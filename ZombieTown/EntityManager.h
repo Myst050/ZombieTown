@@ -9,4 +9,6 @@ struct EntityManager {
 	void addEntity(const Entity& entity);
 	void update(int bx, int by);
 	void draw() const;
+	void checkCollisions();
+	void giveRemaining();
 };

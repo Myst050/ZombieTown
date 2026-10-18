@@ -23,7 +23,7 @@ int main()
 	World world = { screenWidth, screenHeight };
 	world.init(screenWidth, screenHeight);
 
-	for (int i = 0; i < 10000; i++) {
+	for (int i = 0; i < 100; i++) {
 		Texture2D texture = LoadTexture("C:/Users/mahee/source/repos/ZombieTown/Assets/Human.png");
 		Entity entity = {{(float)screenWidth / 2, (float)screenHeight / 2}, texture, true, false, 100, 150, {0, 0}};
 
@@ -41,6 +41,7 @@ int main()
 		world.draw();
 		entityManager.update(screenWidth, screenHeight);
 		entityManager.draw();
+		entityManager.giveRemaining();
 		EndDrawing();
 	}
 	world.unload();

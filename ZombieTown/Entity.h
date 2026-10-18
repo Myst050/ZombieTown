@@ -10,6 +10,7 @@ struct Entity {
 	int health;
 	int speed;
 	Vector2 new_position;
+	float radius = 15.0f;
 
 	void Move(int bx, int by);
 	void Spawn(int bx, int by);
