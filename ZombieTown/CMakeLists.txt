@@ -1,5 +1,5 @@
 ﻿# Add your executable from the local files
-add_executable(ZombieTown ZombieTown.cpp ZombieTown.h Entity.cpp Entity.h)
+add_executable(ZombieTown ZombieTown.cpp ZombieTown.h Entity.cpp Entity.h World.cpp World.h EntityManager.cpp EntityManager.h)
 
 # Link Raylib to it
 target_link_libraries(ZombieTown PRIVATE raylib)
