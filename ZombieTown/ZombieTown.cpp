@@ -23,15 +23,22 @@ int main()
 	World world = { screenWidth, screenHeight };
 	world.init(screenWidth, screenHeight);
 
-	for (int i = 0; i < 100; i++) {
+	for (int i = 0; i < 5; i++) {
 		Texture2D texture = LoadTexture("C:/Users/mahee/source/repos/ZombieTown/Assets/Human.png");
 		Entity entity = {{(float)screenWidth / 2, (float)screenHeight / 2}, texture, true, false, 100, 150, {0, 0}};
 
 		entityManager.addEntity(entity);
 	}
 
+	for (int i = 0; i < 1; i++) {
+		Texture2D texture = LoadTexture("C:/Users/mahee/source/repos/ZombieTown/Assets/Human.png");
+		Entity zombie = { {(float)screenWidth / 1.5, (float)screenHeight / 1.5}, texture, false, false, 100, 150, {800, 600} };
+
+		entityManager.addEntity(zombie);
+	}
+
 	size_t c_pop = entityManager.getCurrentPopulationInformation();
-	cout << "Current population: " << c_pop << endl;
+	std::cout << "Current population: " << c_pop << std::endl;
 
 
 	while (!WindowShouldClose())
